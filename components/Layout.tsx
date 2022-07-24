@@ -1,3 +1,4 @@
+import { Container } from "@chakra-ui/react";
 import Head from "next/head";
 import { ReactNode } from "react";
 import { Header } from "./Header";
@@ -14,7 +15,7 @@ export const Layout = ({ children, title }: LayoutProps) => {
 				<title>{title}</title>
 			</Head>
 			<Header />
-			<main>{children}</main>
+			<Container>{children}</Container>
 		</>
 	);
 };
