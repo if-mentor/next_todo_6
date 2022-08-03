@@ -13,6 +13,7 @@
   - Akashi
   - taisei
   - Hiromichi
+  - ハジメ
 
 ## 使用技術
 
