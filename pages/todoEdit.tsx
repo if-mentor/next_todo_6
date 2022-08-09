@@ -46,8 +46,13 @@ export default function Create() {
   const [value, setValue] = useState("High");
   const [category, setCategory] = useState<category>("all");
   const [todoList, setTodoList] = useRecoilState<any>(todoListState);
-  const today = new Date();
-  const dayOfWeek = today.getDay() ;
+  const date = new Date()
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const hours = date.getHours();
+  const minutes = date.getMinutes()
+
   
   const {
     handleSubmit,
@@ -222,7 +227,7 @@ export default function Create() {
                   lineHeight="20px"
                   color="blackAlpha.800"
                 >
-                  
+                  <p>{`${year}-${month}-${day} ${hours}:${minutes}`}</p>
                 </Text>
               </Flex>
             </Flex>
